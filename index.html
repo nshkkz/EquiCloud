@@ -6,6 +6,7 @@
     <title>EquiCloud — Horses-as-a-Service</title>
     <meta name="description" content="EquiCloud — оренда, догляд та доставка коней як сервіс для заходів і ферм">
     <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -98,6 +99,61 @@
         </section>
 
         <section>
+            <h2>Галерея наших робіт</h2>
+            <p>Приклади проєктів EquiCloud у форматі складної Grid-сітки.</p>
+            <div class="gallery">
+                <div class="gallery-item item-1">
+                    <img src="img/team.jpg" alt="Команда EquiCloud під час виїзного проєкту">
+                </div>
+                <div class="gallery-item item-2">
+                    <img src="img/services.jpg" alt="Кінь підготовлений до фотосесії">
+                </div>
+                <div class="gallery-item item-3">
+                    <img src="img/team.jpg" alt="Підготовка коней для публічного заходу">
+                </div>
+                <div class="gallery-item item-4">
+                    <img src="img/services.jpg" alt="Супровід коня інструктором EquiCloud">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Відгуки клієнтів</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <blockquote>
+                            <p>"Організація на найвищому рівні. Кінь був спокійний, доглянутий, а команда дуже професійна."</p>
+                            <cite>Олена, event-менеджерка</cite>
+                        </blockquote>
+                    </div>
+                    <div class="swiper-slide">
+                        <blockquote>
+                            <p>"Замовляли для фотозйомки. Усе чітко за графіком і з увагою до безпеки."</p>
+                            <cite>Андрій, фотограф</cite>
+                        </blockquote>
+                    </div>
+                    <div class="swiper-slide">
+                        <blockquote>
+                            <p>"Дуже зручно, що є і оренда, і транспортування, і супровід в одному сервісі."</p>
+                            <cite>Ірина, власниця ферми</cite>
+                        </blockquote>
+                    </div>
+                    <div class="swiper-slide">
+                        <blockquote>
+                            <p>"Після першого замовлення працюємо з EquiCloud постійно. Рекомендую."</p>
+                            <cite>Максим, керівник проєктів</cite>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section>
             <h2>Відео демонстрація</h2>
             <p>Огляд наших послуг та огляд коней:</p>
             <iframe 
@@ -137,5 +193,7 @@
     </footer>
 
     <a href="#" class="back-to-top" aria-label="Повернутися вгору">↑</a>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
