@@ -18,7 +18,12 @@
                 <p>Оренда, догляд та доставка коней для заходів і ферм</p>
             </div>
         </div>
-        <nav>
+        <button class="hamburger" aria-label="Меню" aria-controls="mobile-menu" aria-expanded="false" type="button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="main-menu" aria-label="Основна навігація">
             <ul>
                 <li><a href="index.html">Головна</a></li>
                 <li><a href="about.html">Про нас</a></li>
@@ -27,7 +32,18 @@
                 <li><a href="contacts.html">Контакти</a></li>
             </ul>
         </nav>
+        <nav class="mobile-menu" id="mobile-menu" aria-label="Мобільна навігація">
+            <a href="index.html">Головна</a>
+            <a href="about.html">Про нас</a>
+            <a href="services.html">Послуги</a>
+            <a href="price.html">Прайс і графік</a>
+            <a href="contacts.html">Контакти</a>
+        </nav>
     </header>
+
+    <div class="scroll-down" aria-hidden="true">
+        <span>↓</span>
+    </div>
 
     <main>
         <section id="about">

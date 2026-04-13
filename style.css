@@ -89,6 +89,95 @@ nav a:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+.scroll-down {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 30px;
+    color: var(--brand-a);
+    animation: bounce 2s infinite;
+    user-select: none;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.hamburger {
+    display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 1101;
+}
+
+.bar {
+    display: block;
+    width: 26px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--white);
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.mobile-menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: min(72vw, 320px);
+    height: 100vh;
+    background: var(--white);
+    box-shadow: 10px 0 24px rgba(0, 0, 0, 0.16);
+    transition: left 0.3s ease;
+    z-index: 1100;
+    padding: 90px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mobile-menu a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 12px;
+    border-radius: 8px;
+}
+
+.mobile-menu a:hover {
+    background: #eef6ff;
+}
+
+.mobile-menu.active {
+    left: 0;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
 main {
     flex: 1;
     width: 100%;
@@ -239,6 +328,29 @@ li {
 
 .swiper-slide p {
     margin-bottom: 10px;
+}
+
+.swiper-slide h2,
+.swiper-slide p,
+.swiper-slide cite {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s;
+}
+
+.swiper-slide-active h2,
+.swiper-slide-active p,
+.swiper-slide-active cite {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.swiper-slide-active p {
+    transition-delay: 0.2s;
+}
+
+.swiper-slide-active cite {
+    transition-delay: 0.35s;
 }
 
 .swiper-slide cite {
@@ -488,5 +600,34 @@ footer ul {
 
     .swiper-slide {
         padding: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+    .header-brand {
+        flex-direction: row;
+        max-width: calc(100% - 70px);
+    }
+
+    .header-brand img {
+        max-width: 60px;
+    }
+
+    .header-brand p {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .main-menu {
+        display: none;
     }
 }
