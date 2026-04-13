@@ -488,6 +488,26 @@ footer a {
     text-decoration: none;
 }
 
+.lab14-page main {
+    max-width: 1140px;
+}
+
+.my-svg-icon {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.my-svg-icon circle {
+    transition: fill 0.3s ease, stroke 0.3s ease, transform 0.3s ease;
+    transform-origin: center;
+}
+
+.my-svg-icon:hover circle {
+    fill: #dc3545;
+    stroke: #dc3545;
+    transform: scale(1.08);
+}
+
 footer ul {
     list-style: none;
     display: flex;
