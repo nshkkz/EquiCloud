@@ -32,6 +32,9 @@
                 <li><a href="contacts.html">Контакти</a></li>
             </ul>
         </nav>
+        <button class="header-cta" id="open-modal-btn" type="button" aria-haspopup="dialog" aria-controls="my-modal">
+            Зв'язатися з нами
+        </button>
         <nav class="mobile-menu" id="mobile-menu" aria-label="Мобільна навігація">
             <a href="index.html">Головна</a>
             <a href="about.html">Про нас</a>
@@ -61,6 +64,34 @@
                 <li>Послуги берейтора та щоденного догляду</li>
                 <li>Транспортування та логістика</li>
             </ul>
+        </section>
+
+        <section class="tabs-section" aria-labelledby="tabs-title">
+            <h2 id="tabs-title">Деталі послуг у вкладках</h2>
+            <div class="tabs-container">
+                <div class="tabs-header" role="tablist" aria-label="Деталі послуг EquiCloud">
+                    <button class="tab-btn active" type="button" data-tab="tab-desc" role="tab" aria-selected="true">Опис</button>
+                    <button class="tab-btn" type="button" data-tab="tab-specs" role="tab" aria-selected="false">Характеристики</button>
+                    <button class="tab-btn" type="button" data-tab="tab-reviews" role="tab" aria-selected="false">Відгуки</button>
+                </div>
+
+                <div class="tabs-body">
+                    <div id="tab-desc" class="tab-content active" role="tabpanel">
+                        <p>EquiCloud надає послуги з оренди, підготовки та доставки коней для приватних подій, зйомок і навчання. Кожен виїзд планується з урахуванням маршруту, безпеки та стану тварини.</p>
+                    </div>
+                    <div id="tab-specs" class="tab-content" role="tabpanel">
+                        <p>Ключові характеристики сервісу:</p>
+                        <ul>
+                            <li>ветеринарний контроль перед виїздом;</li>
+                            <li>професійний супровід інструктора;</li>
+                            <li>спеціалізований транспорт і логістика.</li>
+                        </ul>
+                    </div>
+                    <div id="tab-reviews" class="tab-content" role="tabpanel">
+                        <p>Клієнти відзначають пунктуальність команди, спокій тварин та зрозумілу комунікацію. Це допомагає безпечно проводити фотосесії, івенти та навчальні заняття.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section>
@@ -193,6 +224,23 @@
             </audio>
         </section>
     </main>
+
+    <div class="modal-overlay" id="my-modal" aria-hidden="true">
+        <div class="modal-window" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="close-modal" type="button" aria-label="Закрити вікно">&times;</button>
+            <h2 id="modal-title">Залиште заявку</h2>
+            <p>Ми зв'яжемося з вами для уточнення деталей замовлення.</p>
+            <form>
+                <label for="client-name">Ваше ім'я</label>
+                <input type="text" id="client-name" name="client-name" placeholder="Введіть ім'я">
+
+                <label for="client-phone">Ваш телефон</label>
+                <input type="tel" id="client-phone" name="client-phone" placeholder="+380...">
+
+                <button type="submit">Надіслати</button>
+            </form>
+        </div>
+    </div>
 
     <footer id="contacts">
         <p>Контакти:<br>

@@ -89,6 +89,31 @@ nav a:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+.header-cta {
+    border: 0;
+    border-radius: 999px;
+    padding: 10px 16px;
+    background: var(--white);
+    color: var(--brand-a);
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.header-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
+}
+
+.header-cta:focus-visible,
+.tab-btn:focus-visible,
+.close-modal:focus-visible {
+    outline: 3px solid #ffe08a;
+    outline-offset: 2px;
+}
+
 .scroll-down {
     text-align: center;
     margin-top: 12px;
@@ -368,6 +393,105 @@ li {
     background: var(--brand-a);
 }
 
+.tabs-container {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #ffffff 0%, #f9fbfe 100%);
+}
+
+.tabs-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 16px 16px 0;
+}
+
+.tab-btn {
+    border: 1px solid var(--border);
+    background: #eef3f8;
+    color: var(--text);
+    border-radius: 999px;
+    padding: 10px 16px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.tab-btn.active {
+    background: linear-gradient(120deg, var(--brand-a), var(--brand-b));
+    color: var(--white);
+    border-color: transparent;
+}
+
+.tabs-body {
+    padding: 16px;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.35s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content ul {
+    margin-top: 10px;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.7);
+    z-index: 2000;
+}
+
+.modal-overlay.open {
+    display: flex;
+}
+
+.modal-window {
+    position: relative;
+    width: min(100%, 440px);
+    padding: 26px;
+    border-radius: 18px;
+    background: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+
+.modal-window p {
+    margin-bottom: 18px;
+}
+
+.modal-window form {
+    display: grid;
+    gap: 12px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    border: 0;
+    background: transparent;
+    color: var(--text);
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
 .services-cards {
     display: flex;
     flex-wrap: wrap;
@@ -546,6 +670,11 @@ footer ul {
         flex-direction: column;
     }
 
+    .header-cta {
+        width: 100%;
+        max-width: 260px;
+    }
+
     nav ul {
         justify-content: center;
         flex-wrap: wrap;
@@ -649,5 +778,10 @@ footer ul {
 
     .main-menu {
         display: none;
+    }
+
+    .header-cta {
+        width: min(260px, 100%);
+        margin: 0 auto;
     }
 }
